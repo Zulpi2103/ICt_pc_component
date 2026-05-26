@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ultimate PC specs guide</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <h1>Ultimate PC specs guide</h1>
+
+  <h2>
+    Do you play games? Do you want to know what GPU, CPU, and RAM you need?
+    Well, this is the right place for you. Pick the games you want to play and
+    get a full spec sheet personalised just for your needs.
+  </h2>
+
+  <h2>
+    Everything assumes 1440p gaming at at least High settings, so you can be sure
+    that the games will run smoothly and look beautiful.
+  </h2>
+
+  <h3>Pick the games you want to play:</h3>
+
+
+  <h4>General games:</h4>
+
+  <div class="games-grid">
+
+    <input class="game-checkbox" type="checkbox" id="baldurs-gate-3" name="game" value="Baldur's Gate 3">
+    <label class="game-card" for="baldurs-gate-3" style="--game-image: url('images/baldurs-gate-3.jpg');">
+      <span class="game-image"></span>
+      <span class="game-title">Baldur's Gate 3</span>
+    </label>
+
+    <input class="game-checkbox" type="checkbox" id="clair-obscur-expedition-33" name="game" value="Clair Obscur: Expedition 33">
+    <label class="game-card" for="clair-obscur-expedition-33" style="--game-image: url('images/clair-obscur-expedition-33.jpg');">
+      <span class="game-image"></span>
+      <span class="game-title">Clair Obscur: Expedition 33</span>
+    </label>
+
+    <input class="game-checkbox" type="checkbox" id="cyberpunk-2077" name="game" value="Cyberpunk 2077">
+    <label class="game-card" for="cyberpunk-2077" style="--game-image: url('images/cyberpunk-2077.jpg');">
+      <span class="game-image"></span>
+      <span class="game-title">Cyberpunk 2077</span>
+    </label>
+
+    <input class="game-checkbox" type="checkbox" id="gta-online" name="game" value="GTA Online">
+    <label class="game-card" for="gta-online" style="--game-image: url('images/gta-online.jpg');">
+      <span class="game-image"></span>
+      <span class="game-title">Grand Theft Auto Online</span>
+    </label>
+
+    <input class="game-checkbox" type="checkbox" id="indiana-jones-great-circle" name="game" value="Indiana Jones and the Great Circle (Full RT)">
+    <label class="game-card" for="indiana-jones-great-circle" style="--game-image: url('images/indiana-jones-and-the-great-circle.jpg');">
+      <span class="game-image"></span>
+      <span class="game-title">Indiana Jones and the Great Circle (Full Ray Tracing)</span>
+    </label>
+
+    <input class="game-checkbox" type="checkbox" id="metro-exodus-enhanced-edition" name="game" value="Metro Exodus: Enhanced Edition">
+    <label class="game-card" for="metro-exodus-enhanced-edition" style="--game-image: url('images/metro-exodus-enhanced-edition.jpg');">
+      <span class="game-image"></span>
+      <span class="game-title">Metro Exodus: Enhanced Edition</span>
+    </label>
+
+    <input class="game-checkbox" type="checkbox" id="minecraft" name="game" value="Minecraft">
+    <label class="game-card" for="minecraft" style="--game-image: url('images/minecraft.jpg');">
+      <span class="game-image"></span>
+      <span class="game-title">Minecraft <small>with high modding and shader capacity</small></span>
+    </label>
+
+    <input class="game-checkbox" type="checkbox" id="mount-blade-2-bannerlord" name="game" value="Mount & Blade II: Bannerlord">
+    <label class="game-card" for="mount-blade-2-bannerlord" style="--game-image: url('images/mount-and-blade-2-bannerlord.jpg');">
+      <span class="game-image"></span>
+      <span class="game-title">Mount & Blade II: Bannerlord</span>
+    </label>
+
+    <input class="game-checkbox" type="checkbox" id="path-of-exile-2" name="game" value="Path of Exile 2">
+    <label class="game-card" for="path-of-exile-2" style="--game-image: url('images/path-of-exile-2.jpg');">
+      <span class="game-image"></span>
+      <span class="game-title">Path of Exile 2</span>
+    </label>
+
+    <input class="game-checkbox" type="checkbox" id="phasmophobia" name="game" value="Phasmophobia">
+    <label class="game-card" for="phasmophobia" style="--game-image: url('images/phasmophobia.jpg');">
+      <span class="game-image"></span>
+      <span class="game-title">Phasmophobia</span>
+    </label>
+
+    <input class="game-checkbox" type="checkbox" id="uncharted-legacy-of-thieves" name="game" value="Uncharted: Legacy of Thieves Collection">
+    <label class="game-card" for="uncharted-legacy-of-thieves" style="--game-image: url('images/uncharted-legacy-of-thieves.jpg');">
+      <span class="game-image"></span>
+      <span class="game-title">Uncharted: Legacy of Thieves Collection</span>
+    </label>
+
+    <input class="game-checkbox" type="checkbox" id="the-last-of-us-part-2" name="game" value="The Last of Us Part II">
+    <label class="game-card" for="the-last-of-us-part-2" style="--game-image: url('images/the-last-of-us-part-2.jpg');">
+      <span class="game-image"></span>
+      <span class="game-title">The Last of Us Part II</span>
+    </label>
+
+  </div>
+
+
+  <h4>Simulation games:</h4>
+
+  <div class="games-grid">
+
+    <input class="game-checkbox" type="checkbox" id="anno-117-pax-romana" name="game" value="Anno 117: Pax Romana">
+    <label class="game-card" for="anno-117-pax-romana" style="--game-image: url('images/anno-117-pax-romana.jpg');">
+      <span class="game-image"></span>
+      <span class="game-title">Anno 117: Pax Romana</span>
+    </label>
+
+    <input class="game-checkbox" type="checkbox" id="hearts-of-iron-4" name="game" value="Hearts of Iron IV">
+    <label class="game-card" for="hearts-of-iron-4" style="--game-image: url('images/hearts-of-iron-4.jpg');">
+      <span class="game-image"></span>
+      <span class="game-title">Hearts of Iron IV</span>
+    </label>
+
+    <input class="game-checkbox" type="checkbox" id="house-flipper" name="game" value="House Flipper">
+    <label class="game-card" for="house-flipper" style="--game-image: url('images/house-flipper.jpg');">
+      <span class="game-image"></span>
+      <span class="game-title">House Flipper</span>
+    </label>
+
+    <input class="game-checkbox" type="checkbox" id="microsoft-flight-simulator-2024" name="game" value="Microsoft Flight Simulator 2024">
+    <label class="game-card" for="microsoft-flight-simulator-2024" style="--game-image: url('images/microsoft-flight-simulator-2024.jpg');">
+      <span class="game-image"></span>
+      <span class="game-title">Microsoft Flight Simulator 2024</span>
+    </label>
+
+    <input class="game-checkbox" type="checkbox" id="pc-building-simulator-2" name="game" value="PC Building Simulator 2">
+    <label class="game-card" for="pc-building-simulator-2" style="--game-image: url('images/pc-building-simulator-2.jpg');">
+      <span class="game-image"></span>
+      <span class="game-title">PC Building Simulator 2</span>
+    </label>
+
+    <input class="game-checkbox" type="checkbox" id="stellaris" name="game" value="Stellaris">
+    <label class="game-card" for="stellaris" style="--game-image: url('images/stellaris.jpg');">
+      <span class="game-image"></span>
+      <span class="game-title">Stellaris</span>
+    </label>
+
+  </div>
+
+
+  <h4>Competitive games:</h4>
+
+  <div class="games-grid">
+
+    <input class="game-checkbox" type="checkbox" id="counter-strike-2" name="game" value="Counter Strike 2">
+    <label class="game-card" for="counter-strike-2" style="--game-image: url('images/counter-strike-2.jpg');">
+      <span class="game-image"></span>
+      <span class="game-title">Counter Strike 2</span>
+    </label>
+
+    <input class="game-checkbox" type="checkbox" id="fortnite" name="game" value="Fortnite">
+    <label class="game-card" for="fortnite" style="--game-image: url('images/fortnite.jpg');">
+      <span class="game-image"></span>
+      <span class="game-title">Fortnite</span>
+    </label>
+
+    <input class="game-checkbox" type="checkbox" id="league-of-legends" name="game" value="League of Legends">
+    <label class="game-card" for="league-of-legends" style="--game-image: url('images/league-of-legends.jpg');">
+      <span class="game-image"></span>
+      <span class="game-title">League of Legends</span>
+    </label>
+
+    <input class="game-checkbox" type="checkbox" id="rocket-league" name="game" value="Rocket League">
+    <label class="game-card" for="rocket-league" style="--game-image: url('images/rocket-league.jpg');">
+      <span class="game-image"></span>
+      <span class="game-title">Rocket League</span>
+    </label>
+
+    <input class="game-checkbox" type="checkbox" id="valorant" name="game" value="Valorant">
+    <label class="game-card" for="valorant" style="--game-image: url('images/valorant.jpg');">
+      <span class="game-image"></span>
+      <span class="game-title">Valorant</span>
+    </label>
+
+  </div>
+
+
+  <button onclick="calculateBuild()">Find optimal build</button>
+
+  <div id="result"></div>
+
+
+  <div id="suggestGame">
+    <h3>Request a game</h3>
+
+    <form action="https://formspree.io/f/xredlleo" method="POST">
+      <label>
+        Your email:
+        <input type="email" name="email">
+      </label>
+
+      <label>
+        Game request:
+        <textarea name="message" required></textarea>
+      </label>
+
+      <button type="submit">Send</button>
+    </form>
+  </div>
+
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
