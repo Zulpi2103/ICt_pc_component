@@ -11,13 +11,16 @@ const gpus = [
   { name: "GTX 1060 6GB", score: 100, vram: 6, brand: "NVIDIA" },
   { name: "RX 580", score: 105, vram: 8, brand: "AMD" },
   { name: "GTX 1660 Super", score: 130, vram: 8, brand: "NVIDIA" },
-  { name: "RTX 3060", score: 180, vram: 12, brand: "NVIDIA", hasRayTracing: true },
+  { name: "RX 5600 XT", score: 160, vram: 8, brand: "AMD" },
+  { name: "RTX 3060", score: 180, vram: 12, brand: "NVIDIA"},
   { name: "RX 6700 XT", score: 230, vram: 12, brand: "AMD" },
-  { name: "RTX 4070", score: 230, vram: 12, brand: "NVIDIA", hasRayTracing: true },
+  { name: "RTX 3070", score: 230, vram: 8, brand: "NVIDIA", hasRayTracing: true },
+  { name: "RTX 4070", score: 290, vram: 12, brand: "NVIDIA", hasRayTracing: true },
   { name: "RX 7800 XT", score: 300, vram: 16, brand: "AMD" },
   { name: "RX 9070 XT", score: 350, vram: 16, brand: "AMD" },
   { name: "RTX 5070 Ti", score: 380, vram: 16, brand: "NVIDIA", hasRayTracing: true },
-  { name: "RTX 5080", score: 410, vram: 16, brand: "NVIDIA", hasRayTracing: true }
+  { name: "RTX 5080", score: 410, vram: 16, brand: "NVIDIA", hasRayTracing: true },
+  { name: "RTX 5090", score: 550, vram: 32, brand: "NVIDIA", hasRayTracing: true }
 ];
 
 const ramOptions = [4, 8, 16, 32, 64];
@@ -214,6 +217,22 @@ const games = [
     minVram: 8,
     storage: 220,
     requiresX3D: true
+  },
+  {
+    name: "Kingdom Come: Deliverance",
+    minCpuScore: 100,
+    minGpuScore: 180,
+    minRam: 16,
+    minVram: 8,
+    storage: 72,
+  },
+  {
+    name: "Kingdom Come: Deliverance 2",
+    minCpuScore: 130,
+    minGpuScore: 260,
+    minRam: 32,
+    minVram: 8,
+    storage: 120,
   }
 ];
 

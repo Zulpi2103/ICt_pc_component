@@ -132,7 +132,6 @@ h4 {
     transform 180ms ease,
     border-color 180ms ease,
     box-shadow 180ms ease,
-    background 180ms ease;
 }
 
 .game-card:hover {
@@ -294,6 +293,8 @@ button:hover {
 button:active {
   transform: translateY(0);
 }
+
+/*Brand checks*/
 
 
 /*Result panel*/
