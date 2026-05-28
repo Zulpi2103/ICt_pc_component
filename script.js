@@ -75,8 +75,9 @@ function calculateBuild() {
       <p>Required RAM: ${requiredRam} GB</p>
     `;
     return;
-    
-  else if (requiredGpuScore < 100 || requiredCpuScore < 100 || requiredRam < 4)
+  }
+  
+  if (requiredGpuScore < 100 || requiredCpuScore < 100 || requiredRam < 4 || recommendedCpu < 100 || recommendedGpu < 100 || recommendedRam < 4 ) {
     document.getElementById("result").innerHTML = `
       <h2>bruh.</h2>
     `;
