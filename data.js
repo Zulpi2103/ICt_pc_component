@@ -233,6 +233,30 @@ const games = [
     minRam: 32,
     minVram: 8,
     storage: 120,
+  },
+  {
+    name: "Palworld",
+    minCpuScore: 100,
+    minGpuScore: 160,
+    minRam: 32,
+    minVram: 4,
+    storage: 40,
+  },
+  {
+    name: "The Witcher 3",
+    minCpuScore: 100,
+    minGpuScore: 150,
+    minRam: 16,
+    minVram: 4,
+    storage: 60,
+  },
+  {
+    name: "Roblox",
+    minCpuScore: 0,
+    minGpuScore: 0,
+    minRam: 8,
+    minVram: 4,
+    storage: 1,
   }
 ];
 
