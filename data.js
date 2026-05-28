@@ -254,7 +254,7 @@ const games = [
     name: "Roblox",
     minCpuScore: 1,
     minGpuScore: 1,
-    minRam: 8,
+    minRam: 4,
     minVram: 4,
     storage: 1,
   }
