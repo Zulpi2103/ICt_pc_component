@@ -294,8 +294,12 @@ button:active {
   transform: translateY(0);
 }
 
-/*Brand checks*/
-/*Kašlu na to nakonec*/
+/*Brand checkboxes*/
+
+.brand-checkbox {
+  display: none;
+  padding-left: 28px;
+}
 
 
 /*Result panel*/
