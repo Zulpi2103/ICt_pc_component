@@ -159,7 +159,7 @@ h4 {
     linear-gradient(135deg, rgba(139, 92, 246, 0.30), rgba(75, 85, 99, 0.26)),
     var(--game-image);
 
-  background-size: cover;
+  background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
 
@@ -295,6 +295,7 @@ button:active {
 }
 
 /*Brand checks*/
+/*Kašlu na to nakonec*/
 
 
 /*Result panel*/
