@@ -12,6 +12,8 @@ function calculateBuild() {
 
   const selectedGames = games.filter(game => selectedGameNames.includes(game.name));
 
+  const selectedBrands = Array.from(document.querySelectorAll('input[name="brand"]:checked')).map(checkbox => checkbox.value);
+
   let requiredCpuScore = 0;
   let needX3D = false;
   let requiredGpuScore = 0;
@@ -53,12 +55,20 @@ function calculateBuild() {
   const recommendedCpu = cpus
     .slice()
     .sort((a, b) => a.score - b.score)
-    .find(cpu => cpu.score >= requiredCpuScore && (!needX3D || cpu.hasx3d));
+    .find(cpu =>
+      cpu.score >= requiredCpuScore &&
+      (!needX3D || cpu.hasx3d)
+    );
 
   const recommendedGpu = gpus
     .slice()
     .sort((a, b) => a.score - b.score)
-    .find(gpu => gpu.score >= requiredGpuScore && gpu.vram >= requiredVram && (!needRayTracing || gpu.hasRayTracing));
+    .find(gpu =>
+      gpu.score >= requiredGpuScore &&
+      gpu.vram >= requiredVram &&
+      (!needRayTracing || gpu.hasRayTracing)) &&
+      (selectedBrands.length === 0 || selectedBrands.includes(gpu.brand)
+    );
 
   const recommendedRam = ramOptions
     .slice()
