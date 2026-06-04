@@ -89,7 +89,7 @@
     </label>
 
     <input class="game-checkbox" type="checkbox" id="path-of-exile-2" name="game" value="Path of Exile 2">
-    <label class="game-card" for="path-of-exile-2" style="--game-image: url('images/PoE.jpg');">
+    <label class="game-card" for="path-of-exile-2" style="--game-image: url('images/PoE2.jpg');">
       <span class="game-image"></span>
       <span class="game-title">Path of Exile 2</span>
     </label>
@@ -144,7 +144,7 @@
     </label>
 
     <input class="game-checkbox" type="checkbox" id="microsoft-flight-simulator-2024" name="game" value="Microsoft Flight Simulator 2024">
-    <label class="game-card" for="microsoft-flight-simulator-2024" style="--game-image: url('images/MSFS24.jpg');">
+    <label class="game-card" for="microsoft-flight-simulator-2024" style="--game-image: url('images/MSFS2024.jpg');">
       <span class="game-image"></span>
       <span class="game-title">Microsoft Flight Simulator 2024</span>
     </label>
@@ -169,7 +169,7 @@
   <div class="games-grid">
 
     <input class="game-checkbox" type="checkbox" id="counter-strike-2" name="game" value="Counter Strike 2">
-    <label class="game-card" for="counter-strike-2" style="--game-image: url('images/CS2.jpg');">
+    <label class="game-card" for="counter-strike-2" style="--game-image: url('images/counter-strike-2.jpg');">
       <span class="game-image"></span>
       <span class="game-title">Counter Strike 2</span>
     </label>
@@ -200,11 +200,27 @@
 
   </div>
 
-  <input class="brand-checkbox" type="checkbox" id="AMD" name="brand" value="AMD">
-    <label for="AMD">AMD</label>
+  <section class="brand-section" aria-labelledby="brand-section-title">
+    <p class="brand-kicker">Optional filter</p>
+    <h3 id="brand-section-title">Preferred GPU brand</h3>
+    <p class="brand-description">
+      Choose AMD, NVIDIA, or both if you want the recommendation to respect your preferred GPU ecosystem.
+    </p>
 
-  <input class="brand-checkbox" type="checkbox" id="NVIDIA" name="brand" value="NVIDIA">
-    <label for="NVIDIA">NVIDIA</label>
+    <div class="brand-options">
+      <input class="brand-checkbox" type="checkbox" id="AMD" name="brand" value="AMD">
+      <label class="brand-card brand-amd" for="AMD">
+        <span class="brand-name">AMD</span>
+        <span class="brand-detail">Radeon GPUs</span>
+      </label>
+
+      <input class="brand-checkbox" type="checkbox" id="NVIDIA" name="brand" value="NVIDIA">
+      <label class="brand-card brand-nvidia" for="NVIDIA">
+        <span class="brand-name">NVIDIA</span>
+        <span class="brand-detail">GeForce GPUs</span>
+      </label>
+    </div>
+  </section>
 
   <button onclick="calculateBuild()">Find optimal build</button>
 

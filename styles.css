@@ -131,7 +131,7 @@ h4 {
   transition:
     transform 180ms ease,
     border-color 180ms ease,
-    box-shadow 180ms ease,
+    box-shadow 180ms ease;
 }
 
 .game-card:hover {
@@ -159,7 +159,7 @@ h4 {
     linear-gradient(135deg, rgba(139, 92, 246, 0.30), rgba(75, 85, 99, 0.26)),
     var(--game-image);
 
-  background-size: contain;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 
@@ -296,9 +296,204 @@ button:active {
 
 /*Brand checkboxes*/
 
+.brand-section {
+  margin-top: 44px;
+  padding: 28px;
+
+  text-align: center;
+
+  border-radius: 28px;
+  border: 1px solid rgba(167, 139, 250, 0.20);
+
+  background:
+    radial-gradient(circle at top left, rgba(255, 59, 48, 0.12), transparent 34%),
+    radial-gradient(circle at bottom right, rgba(118, 185, 0, 0.13), transparent 32%),
+    linear-gradient(180deg, rgba(36, 33, 49, 0.86), rgba(26, 24, 36, 0.96));
+
+  box-shadow:
+    0 18px 42px rgba(0, 0, 0, 0.28),
+    inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+.brand-kicker {
+  margin: 0 0 8px;
+
+  font-size: 0.76rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+
+  color: var(--violet-light);
+}
+
+.brand-section h3 {
+  margin: 0 0 8px;
+
+  font-size: 1.55rem;
+  letter-spacing: -0.03em;
+
+  color: white;
+}
+
+.brand-description {
+  max-width: 640px;
+  margin: 0 auto 22px;
+
+  color: var(--text-muted);
+  font-size: 0.96rem;
+}
+
+.brand-options {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
 .brand-checkbox {
-  display: none;
-  padding-left: 28px;
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.brand-card {
+  --brand-main: var(--violet-main);
+  --brand-light: var(--violet-light);
+  --brand-dark: var(--violet-dark);
+  --brand-glow: rgba(139, 92, 246, 0.30);
+  --brand-border: rgba(167, 139, 250, 0.62);
+
+  position: relative;
+  isolation: isolate;
+
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+
+  min-width: 210px;
+  min-height: 82px;
+  padding: 17px 28px;
+
+  overflow: hidden;
+  cursor: pointer;
+  user-select: none;
+
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+
+  background:
+    linear-gradient(180deg, rgba(36, 33, 49, 0.96), rgba(17, 16, 24, 0.98));
+
+  box-shadow:
+    0 12px 28px rgba(0, 0, 0, 0.28),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+
+  transition:
+    transform 170ms ease,
+    border-color 170ms ease,
+    box-shadow 170ms ease,
+    filter 170ms ease;
+}
+
+.brand-amd {
+  --brand-main: #FF3B30;
+  --brand-light: #ff8a80;
+  --brand-dark: #8f1712;
+  --brand-glow: rgba(255, 59, 48, 0.36);
+  --brand-border: rgba(255, 59, 48, 0.76);
+}
+
+.brand-nvidia {
+  --brand-main: #76B900;
+  --brand-light: #b7f55a;
+  --brand-dark: #315a00;
+  --brand-glow: rgba(118, 185, 0, 0.36);
+  --brand-border: rgba(118, 185, 0, 0.76);
+}
+
+.brand-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+
+  background:
+    linear-gradient(135deg, var(--brand-main), var(--brand-dark));
+
+  opacity: 0;
+  transition: opacity 170ms ease;
+}
+
+.brand-card::after {
+  content: "";
+  position: absolute;
+  inset: 2px;
+  z-index: -1;
+
+  border-radius: inherit;
+  background:
+    radial-gradient(circle at top left, rgba(255, 255, 255, 0.22), transparent 42%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.07), transparent 56%);
+
+  opacity: 0.52;
+}
+
+.brand-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--brand-border);
+
+  box-shadow:
+    0 16px 34px rgba(0, 0, 0, 0.34),
+    0 0 24px var(--brand-glow);
+}
+
+.brand-card:hover::before {
+  opacity: 0.22;
+}
+
+.brand-name {
+  font-size: 1.18rem;
+  font-weight: 900;
+  letter-spacing: 0.05em;
+  color: white;
+}
+
+.brand-detail {
+  font-size: 0.76rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--brand-light);
+}
+
+.brand-checkbox:checked + .brand-card {
+  border-color: var(--brand-border);
+
+  box-shadow:
+    0 18px 38px rgba(0, 0, 0, 0.38),
+    0 0 30px var(--brand-glow),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.16);
+}
+
+.brand-checkbox:checked + .brand-card::before {
+  opacity: 0.94;
+}
+
+.brand-checkbox:checked + .brand-card .brand-detail {
+  color: rgba(255, 255, 255, 0.86);
+}
+
+.brand-checkbox:checked + .brand-card .brand-name::after {
+  content: " ✓";
+  font-weight: 900;
+}
+
+.brand-checkbox:focus-visible + .brand-card {
+  outline: 3px solid var(--brand-border);
+  outline-offset: 4px;
 }
 
 
@@ -459,6 +654,15 @@ textarea::placeholder {
 
   button {
     width: 100%;
+  }
+
+  .brand-section {
+    padding: 22px;
+  }
+
+  .brand-card {
+    width: 100%;
+    min-width: 0;
   }
 
   #result:not(:empty),
