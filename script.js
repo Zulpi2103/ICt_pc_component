@@ -66,8 +66,8 @@ function calculateBuild() {
     .find(gpu =>
       gpu.score >= requiredGpuScore &&
       gpu.vram >= requiredVram &&
-      (!needRayTracing || gpu.hasRayTracing)) &&
-      (selectedBrands.length === 0 || selectedBrands.includes(gpu.brand)
+      (!needRayTracing || gpu.hasRayTracing) &&
+      (selectedBrands.length === 0 || selectedBrands.includes(gpu.brand))
     );
 
   const recommendedRam = ramOptions
